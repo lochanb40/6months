@@ -8,12 +8,15 @@
 
 body{
     min-height:100vh;
-    overflow:hidden;
+    overflow-y:auto;
+    overflow-x:hidden;
     font-family:'Segoe UI',sans-serif;
 
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
+
+    padding:40px 0;
 
     background:linear-gradient(180deg,#070b1d,#121b38,#1b2753);
     color:white;
@@ -605,7 +608,7 @@ width:100px;
         transform:translateY(-15px);
     }
 
-    
+
 }
 @keyframes glowPulse{
     0%,100%{
