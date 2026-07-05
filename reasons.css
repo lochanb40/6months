@@ -1,0 +1,846 @@
+/* ==========================================
+                RESET
+========================================== */
+body{
+    background:red !important;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    background:#080b18;
+
+}
+
+/* ==========================================
+            DREAMY BACKGROUND
+========================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    background:
+    radial-gradient(circle at top,
+    #394fb5 0%,
+    #1c2354 40%,
+    #0b1028 75%,
+    #04060f 100%);
+
+}
+
+.gradient{
+
+    position:fixed;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-9;
+
+}
+
+.gradient1{
+
+    background:#ff75b855;
+
+    top:-200px;
+
+    left:-180px;
+
+    animation:blob1 18s ease-in-out infinite;
+
+}
+
+.gradient2{
+
+    background:#766dff55;
+
+    bottom:-220px;
+
+    right:-180px;
+
+    animation:blob2 20s ease-in-out infinite;
+
+}
+
+@keyframes blob1{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(80px,60px);
+
+}
+
+}
+
+@keyframes blob2{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(-90px,-70px);
+
+}
+
+}
+
+/* ==========================================
+                STARS
+========================================== */
+
+.stars{
+
+position:fixed;
+
+inset:0;
+
+z-index:-8;
+
+opacity:.22;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px),
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:140px 140px;
+
+background-position:
+
+0 0,
+
+70px 70px;
+
+animation:stars 90s linear infinite;
+
+}
+
+@keyframes stars{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-500px);
+
+}
+
+}
+
+/* ==========================================
+                HERO
+========================================== */
+
+.hero{
+
+padding:120px 20px 90px;
+
+text-align:center;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.heart{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+animation:heartbeat 2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+}
+
+.hero h1{
+
+font-family:'Caveat',cursive;
+
+font-size:90px;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+text-shadow:
+
+0 0 25px rgba(255,255,255,.25);
+
+}
+
+.hero p{
+
+font-family:'Caveat',cursive;
+
+font-size:34px;
+
+color:#edf0ff;
+
+line-height:1.6;
+
+}
+
+/* ==========================================
+            REASONS CONTAINER
+========================================== */
+
+.reasons{
+
+width:min(900px,90%);
+
+margin:auto;
+
+padding-bottom:150px;
+
+}
+/* ==========================================
+              REASON CARDS
+========================================== */
+
+.reason-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    margin:90px 0;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.30);
+
+}
+
+.reason-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.45);
+
+}
+
+/* Number */
+
+.number{
+
+    position:absolute;
+
+    top:25px;
+
+    right:30px;
+
+    font-size:72px;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.08);
+
+    user-select:none;
+
+}
+
+/* Heading */
+
+.reason-card h2{
+
+    font-family:'Caveat',cursive;
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+    color:white;
+
+}
+
+/* Paragraph */
+
+.reason-card p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#eef2ff;
+
+    max-width:700px;
+
+}
+
+/* Decorative heart */
+
+.reason-card::before{
+
+    content:"❤️";
+
+    position:absolute;
+
+    top:28px;
+
+    left:30px;
+
+    font-size:28px;
+
+    opacity:.25;
+
+}
+
+/* Final card */
+
+.final-card{
+
+    border:2px solid rgba(255,180,220,.35);
+
+    background:
+
+    linear-gradient(
+
+    rgba(255,255,255,.10),
+
+    rgba(255,255,255,.06));
+
+}
+
+/* Fade Animation */
+
+.reason-card{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    animation:fadeUp .8s forwards;
+
+}
+
+.reason-card:nth-child(1){animation-delay:.2s;}
+.reason-card:nth-child(2){animation-delay:.4s;}
+.reason-card:nth-child(3){animation-delay:.6s;}
+.reason-card:nth-child(4){animation-delay:.8s;}
+.reason-card:nth-child(5){animation-delay:1s;}
+.reason-card:nth-child(6){animation-delay:1.2s;}
+.reason-card:nth-child(7){animation-delay:1.4s;}
+.reason-card:nth-child(8){animation-delay:1.6s;}
+.reason-card:nth-child(9){animation-delay:1.8s;}
+.reason-card:nth-child(10){animation-delay:2s;}
+.reason-card:nth-child(11){animation-delay:2.2s;}
+.reason-card:nth-child(12){animation-delay:2.4s;}
+.reason-card:nth-child(13){animation-delay:2.6s;}
+.reason-card:nth-child(14){animation-delay:2.8s;}
+.reason-card:nth-child(15){animation-delay:3s;}
+.reason-card:nth-child(16){animation-delay:3.2s;}
+.reason-card:nth-child(17){animation-delay:3.4s;}
+.reason-card:nth-child(18){animation-delay:3.6s;}
+.reason-card:nth-child(19){animation-delay:3.8s;}
+.reason-card:nth-child(20){animation-delay:4s;}
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+              ENDING SECTION
+========================================== */
+
+.ending-message{
+
+    width:min(900px,90%);
+
+    margin:120px auto 80px;
+
+    text-align:center;
+
+    padding:70px 50px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.ending-message h2{
+
+    font-family:'Caveat',cursive;
+
+    font-size:64px;
+
+    margin-bottom:25px;
+
+    color:white;
+
+}
+
+.ending-message p{
+
+    font-size:22px;
+
+    line-height:2;
+
+    color:#eef2ff;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+            CONTINUE BUTTON
+========================================== */
+
+#continueBtn{
+
+    margin-top:50px;
+
+    padding:18px 55px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff7fbf,
+        #8c7dff
+    );
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 45px rgba(140,125,255,.35);
+
+}
+
+#continueBtn:hover{
+
+    transform:
+    translateY(-6px)
+    scale(1.03);
+
+    box-shadow:
+    0 28px 70px rgba(140,125,255,.45);
+
+}
+
+/* ==========================================
+           FLOATING PARTICLES
+========================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(circle,
+    rgba(255,255,255,.18) 1px,
+    transparent 1px);
+
+    background-size:140px 140px;
+
+    opacity:.25;
+
+    animation:particlesMove 70s linear infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes particlesMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-500px);
+
+}
+
+}
+
+/* ==========================================
+              SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#11182d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7f78ff;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#b082ff;
+
+}
+
+/* ==========================================
+              MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+}
+
+.reason-card{
+
+padding:30px;
+
+margin:60px 0;
+
+}
+
+.reason-card h2{
+
+font-size:38px;
+
+}
+
+.reason-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.number{
+
+font-size:48px;
+
+top:15px;
+
+right:20px;
+
+}
+
+.ending-message{
+
+padding:45px 25px;
+
+}
+
+.ending-message h2{
+
+font-size:46px;
+
+}
+
+.ending-message p{
+
+font-size:18px;
+
+}
+
+#continueBtn{
+
+width:100%;
+
+padding:18px;
+
+}
+
+}
+/* ===========================
+        JS Animations
+=========================== */
+
+.reason-card{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:
+
+opacity .8s ease,
+
+transform .8s ease;
+
+}
+
+.reason-card.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.heart{
+
+transition:.4s;
+
+}
+
+.heart.pulse{
+
+transform:scale(1.18);
+
+filter:drop-shadow(0 0 20px #ff8fcf);
+
+}
+
+
+.hero h1{
+
+animation:heroGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes heroGlow{
+
+0%,100%{
+
+text-shadow:
+
+0 0 20px rgba(255,255,255,.2),
+
+0 0 40px rgba(255,120,220,.15);
+
+}
+
+50%{
+
+text-shadow:
+
+0 0 35px rgba(255,255,255,.4),
+
+0 0 80px rgba(255,120,220,.35);
+
+}
+
+}
+.reason-card:hover{
+
+transform:
+
+translateY(-10px)
+
+scale(1.015);
+
+}
+/* ===============================
+        Shooting Stars
+=============================== */
+
+.shooting-stars{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:1;
+
+}
+
+.shooting-stars span{
+
+position:absolute;
+
+width:180px;
+
+height:2px;
+
+background:linear-gradient(to right,white,transparent);
+
+transform:rotate(-25deg);
+
+opacity:0;
+
+animation:shoot 8s linear infinite;
+
+}
+
+.shooting-stars span:nth-child(1){
+
+top:10%;
+left:-20%;
+animation-delay:0s;
+
+}
+
+.shooting-stars span:nth-child(2){
+
+top:30%;
+left:-25%;
+animation-delay:2s;
+
+}
+
+.shooting-stars span:nth-child(3){
+
+top:55%;
+left:-15%;
+animation-delay:4s;
+
+}
+
+.shooting-stars span:nth-child(4){
+
+top:75%;
+left:-30%;
+animation-delay:6s;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+transform:translateX(0) translateY(0) rotate(-25deg);
+
+opacity:0;
+
+}
+
+8%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateX(1800px) translateY(-600px) rotate(-25deg);
+
+opacity:0;
+
+}
+
+}
+

@@ -1,0 +1,615 @@
+/* ===============================
+        OUR STORY
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(180deg,#081225,#101f43,#1b2956,#0b1531);
+
+    color:white;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* ===============================
+        BACKGROUND
+================================ */
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%,rgba(255,120,170,.10),transparent 22%),
+    radial-gradient(circle at 85% 25%,rgba(255,255,255,.05),transparent 25%),
+    radial-gradient(circle at 50% 80%,rgba(255,215,0,.05),transparent 28%);
+
+    z-index:-4;
+
+}
+
+.stars{
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+
+    background-size:65px 65px;
+
+    opacity:.12;
+
+    z-index:-3;
+
+}
+
+.gradient{
+
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    opacity:.18;
+
+    animation:floatGradient 14s ease-in-out infinite alternate;
+
+    z-index:-2;
+
+}
+
+.gradient1{
+
+    background:#ff6ea8;
+
+    top:-200px;
+    left:-150px;
+
+}
+
+.gradient2{
+
+    background:#6f9bff;
+
+    bottom:-220px;
+    right:-150px;
+
+}
+
+@keyframes floatGradient{
+
+from{
+
+transform:translateY(0) translateX(0);
+
+}
+
+to{
+
+transform:translateY(60px) translateX(-40px);
+
+}
+
+}
+
+/* ===============================
+        HERO
+================================ */
+
+.hero{
+
+padding:130px 20px 100px;
+
+text-align:center;
+
+}
+
+.hero .heart{
+
+font-size:70px;
+
+animation:pulse 2s infinite;
+
+margin-bottom:15px;
+
+}
+
+.hero h1{
+
+font-size:4.2rem;
+
+margin-bottom:18px;
+
+}
+
+.hero p{
+
+max-width:760px;
+
+margin:auto;
+
+line-height:2;
+
+font-size:1.15rem;
+
+color:#e8e8e8;
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* ===============================
+        TIMELINE
+================================ */
+
+.timeline{
+
+position:relative;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:40px 0 140px;
+
+}
+
+.line{
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+top:0;
+
+bottom:0;
+
+width:4px;
+
+border-radius:20px;
+
+background:linear-gradient(
+to bottom,
+#ffd76d,
+#ff80b3,
+#8ec8ff,
+#ffd76d
+);
+
+box-shadow:
+0 0 15px rgba(255,215,0,.6),
+0 0 40px rgba(255,120,170,.25);
+}
+
+/* ===============================
+        MEMORY
+================================ */
+
+.memory{
+
+position:relative;
+
+display:flex;
+
+width:50%;
+
+padding:35px 50px;
+
+margin:90px 0;
+
+}
+
+.memory.left{
+
+left:0;
+
+justify-content:flex-end;
+
+}
+
+.memory.right{
+
+left:50%;
+
+justify-content:flex-start;
+
+}
+
+.card{
+
+width:100%;
+
+max-width:470px;
+
+padding:35px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+0 18px 40px rgba(0,0,0,.25);
+
+transition:.45s;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+box-shadow:
+
+0 30px 70px rgba(255,120,170,.28);
+
+}
+
+.date{
+
+display:inline-block;
+
+margin-bottom:18px;
+
+padding:6px 16px;
+
+border-radius:30px;
+
+background:rgba(255,215,120,.12);
+
+color:#ffd76d;
+
+font-size:.9rem;
+
+letter-spacing:1px;
+
+}
+
+.card h2{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+color:#ffdce8;
+
+}
+
+.card p{
+
+line-height:2;
+
+font-size:1.05rem;
+
+color:#ececec;
+
+white-space:pre-line;
+
+}
+
+.quote{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:40px;
+
+    font-family:'Caveat', cursive !important;
+
+    font-size:3rem !important;
+
+    font-weight:700;
+
+    color:#ffe680 !important;
+
+    text-align:center;
+
+    line-height:1.4;
+
+    white-space:normal;
+
+    opacity:1;
+
+    text-shadow:
+        0 0 8px rgba(255,230,128,.6),
+        0 0 20px rgba(255,215,120,.4);
+
+}
+/* ===============================
+        DOT
+================================ */
+
+.dot{
+
+position:absolute;
+
+top:35px;
+
+right:-28px;
+
+width:56px;
+
+height:56px;
+
+border-radius:50%;
+
+background:#ff6ea8;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:26px;
+
+box-shadow:
+0 0 25px rgba(255,120,170,.55);
+
+animation:pulse 2.5s infinite;
+
+z-index:10;
+
+border:3px solid white;
+
+transition:.4s;
+
+cursor:default;
+
+}
+
+.memory.right .dot{
+
+left:-28px;
+
+}
+
+/* ===============================
+        CONTINUE
+================================ */
+
+.continue-section{
+
+text-align:center;
+
+margin-top:140px;
+
+}
+
+#continueBtn{
+
+padding:18px 42px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:600;
+
+background:linear-gradient(135deg,#ff6ea8,#ff8fbc);
+
+color:white;
+
+transition:.35s;
+
+box-shadow:
+0 15px 35px rgba(255,105,180,.30);
+
+ position: relative;
+    z-index: 999;
+
+}
+
+#continueBtn:hover{
+
+transform:translateY(-5px) scale(1.05);
+
+}
+
+/* ===============================
+        MOBILE
+================================ */
+
+@media(max-width:900px){
+
+.line{
+
+left:28px;
+
+}
+
+.memory{
+
+width:100%;
+
+left:0!important;
+
+padding-left:75px;
+
+padding-right:20px;
+
+margin:70px 0;
+
+}
+.memory.left,
+.memory.right{
+
+    justify-content:flex-start;
+
+}
+
+.dot{
+
+    left:0;
+    right:auto;
+
+}
+
+.card{
+
+    max-width:100%;
+
+}
+
+.hero h1{
+
+    font-size:2.8rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+    line-height:1.8;
+
+}
+
+.card h2{
+
+    font-size:1.6rem;
+
+}
+
+.card p{
+
+    font-size:1rem;
+    line-height:1.9;
+
+}
+
+.quote{
+
+    font-size:2.8rem;
+
+}
+
+#continueBtn{
+
+    width:90%;
+    max-width:350px;
+
+}
+
+}
+/* ===============================
+        SCROLL ANIMATION
+================================ */
+
+.memory{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:
+
+opacity .9s ease,
+
+transform .9s ease;
+
+}
+
+.memory.left{
+
+transform:translateX(-70px);
+
+}
+
+.memory.right{
+
+transform:translateX(70px);
+
+}
+
+.memory.show{
+
+opacity:1;
+
+transform:translateX(0) translateY(0);
+
+}
+/* =========================
+      STORY INTRO
+========================= */
+
+.story-intro{
+
+    text-align:center;
+
+    margin:0 auto 120px;
+
+    max-width:750px;
+
+    animation:fadeIn 2s ease;
+
+}
+
+.story-intro p{
+
+    font-size:1.25rem;
+
+    color:#ececec;
+
+    line-height:2.1;
+
+    letter-spacing:1px;
+
+    font-style:italic;
+
+}
+.dot:hover{
+
+    transform:scale(1.2);
+
+    box-shadow:
+    0 0 40px #ff80b3;
+
+}

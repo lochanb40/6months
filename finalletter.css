@@ -1,0 +1,637 @@
+/* ===========================
+        RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Cormorant Garamond',serif;
+
+    overflow-x:hidden;
+
+    color:white;
+
+    background:
+radial-gradient(circle at top,#355fa8 0%,transparent 30%),
+radial-gradient(circle at bottom right,#ff79ba22 0%,transparent 30%),
+linear-gradient(
+180deg,
+#050814 0%,
+#08162f 30%,
+#10264b 65%,
+#050814 100%);
+    position:relative;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+        STARS
+=========================== */
+
+.stars{
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:55px 55px;
+
+opacity:.25;
+
+z-index:-5;
+
+}
+
+/* ===========================
+        MOON
+=========================== */
+
+.moon{
+
+position:fixed;
+
+top:60px;
+
+right:80px;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,#fffef5,#ffeeb0);
+
+box-shadow:
+
+0 0 60px #fff5c0,
+
+0 0 140px rgba(255,255,220,.25);
+
+animation:moonFloat 8s ease-in-out infinite;
+
+z-index:-2;
+
+}
+
+@keyframes moonFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+/* ===========================
+        GLOWS
+=========================== */
+
+.glow{
+
+position:fixed;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+filter:blur(130px);
+
+opacity:.18;
+
+z-index:-4;
+
+}
+
+.glow1{
+
+background:#ff73b6;
+
+top:-180px;
+
+left:-150px;
+
+animation:moveGlow1 12s infinite alternate;
+
+}
+
+.glow2{
+
+background:#8b6cff;
+
+bottom:-180px;
+
+right:-150px;
+
+animation:moveGlow2 12s infinite alternate;
+
+}
+
+@keyframes moveGlow1{
+
+to{
+
+transform:translate(50px,70px);
+
+}
+
+}
+
+@keyframes moveGlow2{
+
+to{
+
+transform:translate(-60px,-60px);
+
+}
+
+}
+
+/* ===========================
+        INTRO
+=========================== */
+
+.intro{
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.intro h3{
+
+font-family:'Great Vibes',cursive;
+
+font-size:5rem;
+
+color:#ffd9ef;
+
+margin-bottom:20px;
+
+text-shadow:
+0 0 20px rgba(255,190,230,.25);
+
+}
+
+.intro p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:1.45rem;
+
+line-height:2;
+
+color:#f2f2f2;
+
+font-family:'Cormorant Garamond',serif;
+
+}
+
+/* ===========================
+        LETTER
+=========================== */
+
+.letter-section{
+
+display:flex;
+
+justify-content:center;
+
+padding:20px 20px 80px;
+
+}
+
+.letter{
+
+position:relative;
+
+width:90%;
+
+max-width:920px;
+
+padding:90px 80px;
+
+border-radius:32px;
+
+background:
+linear-gradient(
+180deg,
+#fffdf7,
+#fff7e8 40%,
+#fef2dc 100%);
+border:1px solid rgba(255,240,210,.8);
+
+box-shadow:
+
+0 35px 90px rgba(0,0,0,.45),
+
+0 0 70px rgba(255,220,170,.18);
+
+overflow:hidden;
+
+animation:letterOpen 1.5s ease;
+
+}
+
+
+
+.letter::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:32px;
+
+padding:2px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,170,210,.6),
+rgba(255,238,180,.6),
+rgba(140,190,255,.6));
+
+opacity:.6;
+
+pointer-events:none;
+
+}
+
+.letter::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(rgba(0,0,0,.02) 1px,transparent 1px);
+
+background-size:7px 7px;
+
+opacity:.5;
+
+pointer-events:none;
+
+}
+/* Wax seal */
+
+.wax{
+
+position:absolute;
+
+top:-38px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:82px;
+
+height:82px;
+
+border-radius:50%;
+
+background:
+linear-gradient(135deg,#ff4f8b,#b8154d);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+color:white;
+
+box-shadow:
+
+0 12px 35px rgba(255,70,130,.45);
+
+border:4px solid #ffd9e8;
+
+}
+
+
+.letter h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:6.2rem;
+
+color:#ff5f9f;
+
+text-align:center;
+
+margin-bottom:60px;
+
+font-weight:400;
+
+text-shadow:
+
+0 0 18px rgba(255,120,180,.35);
+
+}
+
+
+#letter{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.9rem;
+
+font-weight:500;
+
+line-height:2.25;
+
+letter-spacing:.3px;
+
+color:#43352d;
+
+white-space:pre-wrap;
+
+text-align:left;
+
+}
+
+.signature{
+
+margin-top:80px;
+
+text-align:right;
+
+font-family:'Great Vibes',cursive;
+
+font-size:3.6rem;
+
+color:#ff5f9f;
+
+text-shadow:
+0 0 15px rgba(255,120,170,.3);
+
+}
+
+/* ===========================
+        END MESSAGE
+=========================== */
+
+.bottom-message{
+
+text-align:center;
+
+padding:70px 20px;
+
+}
+
+.bottom-message p{
+
+    font-size:2rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-weight:600;
+
+    line-height:2;
+
+    color:#ffffff;
+
+    text-shadow:0 0 12px rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+.continue{
+
+display:flex;
+
+justify-content:center;
+
+padding-bottom:100px;
+
+}
+
+#endBtn{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:600;
+
+background:linear-gradient(
+135deg,
+#f7ede2,
+#e8d8c8);
+
+
+color:#6a4d4d;
+
+transition:.35s;
+
+box-shadow:
+0 10px 25px rgba(255,220,180,.18);
+
+}
+
+#endBtn:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+    0 15px 35px rgba(255,220,180,.25);
+
+}
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+.intro h3{
+
+font-size:2.8rem;
+
+}
+
+.letter{
+
+padding:45px 28px;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.35),
+0 0 60px rgba(255,215,150,.18),
+inset 0 1px 0 rgba(255,255,255,.9);
+
+}
+
+.letter h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:6rem;
+
+color:#ff6ea8;
+
+text-align:center;
+
+margin-bottom:50px;
+
+text-shadow:
+0 0 20px rgba(255,110,168,.3);
+
+}
+}
+
+#letter{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    line-height:2.4;
+
+    letter-spacing:.8px;
+
+    color:#473529;
+
+    text-align:justify;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.6);
+
+    white-space:pre-wrap;
+}
+
+.signature{
+
+font-size:2rem;
+
+}
+
+.moon{
+
+width:90px;
+
+height:90px;
+
+right:20px;
+
+}
+
+
+/* ===========================
+        TWINKLING STARS
+=========================== */
+
+.star{
+
+position:absolute;
+
+width:2px;
+
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+opacity:.4;
+
+.star{
+
+animation:twinkle 3s ease-in-out infinite;
+
+}
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.8);
+
+}
+
+}
+@keyframes letterOpen{
+
+0%{
+
+opacity:0;
+
+transform:
+rotateX(-90deg)
+scale(.8);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+rotateX(0)
+scale(1);
+
+}
+
+
+
+}
